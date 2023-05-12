@@ -3,19 +3,19 @@
     "jokeId": 1,
     "jokeSetup": "If tin horns are made of tin, what are foghorns made out of?",
     "jokePunchLine": "XD",
-    "userID": 69
+    "userId": 69
   },
   {
     "jokeId": 2,
     "jokeSetup": "You can tune a piano...",
     "jokePunchLine": "...but you can't tuna fish",
-    "userID": 69
+    "userId": 420
   },
   {
     "jokeId": 3,
     "jokeSetup": "What do you call a cow with no legs?",
     "jokePunchLine": "Ground beef.",
-    "userID": 69
+    "userId": 62
     
   }
 ]
