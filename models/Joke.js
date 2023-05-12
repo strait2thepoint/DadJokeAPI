@@ -16,7 +16,7 @@ Joke.init(
         allowNull: false,
       },
       jokePunchLine: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(120),
         allowNull: false,
       }, 
       userId: {

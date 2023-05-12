@@ -2,7 +2,9 @@ const path = require("path");
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers');
+const indexRoutes = require('./controllers/api/index');
+const homeRoutes = require('./controllers/api/homeRoutes');
+
 const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
@@ -18,7 +20,7 @@ const hbs = exphbs.create({ helpers });
 
 
 const sess = {
-    secret: 'Super secret secret',
+    secret: 'cow says moo',
     cookie: {
         maxAge: 300000,
         httpOnly: true,
