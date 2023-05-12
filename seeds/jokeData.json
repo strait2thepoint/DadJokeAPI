@@ -1,0 +1,22 @@
+// copied from Main/seeds/projectData.json
+// switched out "name", "description", and "needed_funding"
+// with "joke_id", "setup", and "punchline"
+// parts will probably break, because it will probably expect different variable types
+
+[
+  {
+    "joke_id": 1,
+    "setup": "If tin horns are made of tin, what are foghorns made out of?",
+    "punchline": "XD"
+  },
+  {
+    "joke_id": 2,
+    "setup": "You can tune a piano...",
+    "punchline": "...but you can't tuna fish"
+  },
+  {
+    "joke_id": 3,
+    "setup": "What do you call a cow with no legs?",
+    "punchline": "Ground beef."
+  }
+]
