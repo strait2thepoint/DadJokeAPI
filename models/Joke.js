@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection'); //fix these links??
+const User = require('./User');
 
 class Joke extends Model {}
 
@@ -20,7 +21,7 @@ Joke.init(
         allowNull: false,
       }, 
       userId: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
         references:{
             model: User,
