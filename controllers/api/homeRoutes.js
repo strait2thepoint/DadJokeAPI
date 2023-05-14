@@ -16,7 +16,7 @@ router.get('/:id', async (req, res) => {
   try {
     const homeRoutesData = await homeRoutes.findByPk(req.params.id, {
       // JOIN with Joke_ID, using the Joke through table
-      include: [{ model: Joke, through: JokeDatabase, as: 'Joke_ID' }] //JokeDatabase must be changed to the name of the Database. Joke_ID is the PK of Joke table
+      include: [{ model: Joke, through: joke_db, as: 'jokeId' }] //JokeDatabase must be changed to the name of the Database. Joke_ID is the PK of Joke table
     });
 
     if (!homeRoutesData) {
