@@ -1,39 +1,16 @@
 {
-<<<<<<< HEAD
-    "name": "user-list",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js",
-        "seed": "node seeds/seed.js"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "bcrypt": "^5.0.0",
-        "connect-session-sequelize": "^7.0.4",
-        "dotenv": "^8.2.0",
-        "express": "^4.18.2",
-        "express-handlebars": "^5.2.0",
-        "express-session": "^1.17.1",
-        "mysql2": "^2.2.5",
-        "sequelize": "^6.3.5"
-    }
-=======
-  "name": "crowd-funding",
+  "name": "Groan_zone",
   "version": "1.0.0",
-  "description": "",
+  "description": "This program will allow users to add and view jokes based on their popularity from other users on the site. Users can upvote and downvote jokes they like and don't like.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
+    "dev": "nodemon server.js",
     "seed": "node seeds/seed.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Laura Strait, Anuja Lawankar, Dennis Inglehart, Andrew Gomoll",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
@@ -50,5 +27,4 @@
     "eslint-config-prettier": "^6.15.0",
     "prettier": "^2.1.2"
   }
->>>>>>> 44089d764b8205af2ea754257eff3c6b3a7cc387
 }
