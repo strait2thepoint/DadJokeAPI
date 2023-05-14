@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 //requires files needed to run
 const router = require('express').Router();
 const homeRoutes = require('../../models')
-=======
-const express = require ('express');
-const app = express();
-const User = require('../../models/User');
->>>>>>> 44089d764b8205af2ea754257eff3c6b3a7cc387
 
 //Get all Jokes
 router.get('/', async (req, res) => {
