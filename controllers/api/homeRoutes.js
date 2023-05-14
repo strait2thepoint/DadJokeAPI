@@ -1,11 +1,14 @@
 //requires files needed to run
 const router = require('express').Router();
-const homeRoutes = require('../../models')
+const homeRoutes = require('../../models');
+const jokes = require('../../models/Joke');
+const user = require('../../models/User');
+//Need to update paths below to reflect changes on user and jokes
 
 //Get all Jokes
 router.get('/', async (req, res) => {
   try {
-    const homeRoutesData = await HomeRoutes.findAll();
+    const homeRoutesData = await homeRoutes.findAll();
     res.status(200).json(homeRoutesData);
   } catch (err) {
     res.status(500).json(err);
