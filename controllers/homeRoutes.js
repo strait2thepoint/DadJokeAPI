@@ -1,64 +1,84 @@
-//requires files needed to run
 const router = require('express').Router();
-const homeRoutes = require('../../models');
-const jokes = require('../../models/Joke');
-const user = require('../../models/User');
-//Need to update paths below to reflect changes on user and jokes
+const { Joke, User } = require('../models');
+const withAuth = require('../utils/auth');
 
-//Get all Jokes
 router.get('/', async (req, res) => {
   try {
-    const homeRoutesData = await homeRoutes.findAll();
-    res.status(200).json(homeRoutesData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-//Get a single Joke
-router.get('/:id', async (req, res) => {
-  try {
-    const homeRoutesData = await homeRoutes.findByPk(req.params.id, {
-      // JOIN with Joke_ID, using the Joke through table
-      include: [{ model: Joke, through: joke_db, as: 'jokeId' }] //JokeDatabase must be changed to the name of the Database. Joke_ID is the PK of Joke table
+    // Get all projects and JOIN with user data
+    const jokeData = await Joke.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
     });
 
-    if (!homeRoutesData) {
-      res.status(404).json({ message: 'No Joke found with this ID' });
-      return;
-    }
+    // Serialize data so the template can read it
+    const jokes = jokeData.map((joke) => joke.get({ plain: true }));
 
-    res.status(200).json(homeRoutesData);
+    // Pass serialized data and session flag into template
+    res.render('homepage', {
+      jokes,
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-//Create a joke
-router.post('/', async (req, res) => {
+
+router.get('/joke/:id', async (req, res) => {
   try {
-    const homeRoutesData = await homeRoutes.create(req.body);
-    res.status(200).json(homeRoutes);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-//Delete a Joke
-router.delete('/:id', async (req, res) => {
-  try {
-    const homeRoutesData = await homeRoutes.destroy({
-      where: {
-        id: req.params.id
-      }
+    const jokeData = await Joke.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name', 'email', 'id'],
+        },
+      ],
     });
 
-    if (!homeRoutesData) {
-      res.status(404).json({ message: 'No Jokes found with this id' });
-      return;
-    }
 
-    res.status(200).json(homeRoutesData);
+
+    const joke = jokeData.get({ plain: true });
+
+    res.render('joke', {
+      ...joke,
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+// Use withAuth middleware to prevent access to route
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Project }],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render('profile', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+    return;
+  }
+
+  res.render('login');
 });
 
 module.exports = router;
