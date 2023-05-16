@@ -27,38 +27,6 @@ router.get('/:id', withAuth, (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
 });
-// router.get('/', withAuth, (req, res) => {
-
-//     Joke.findAll({
-//       where: {
-//         joke_id: req.session.joke_id
-//       },
-//       attributes: [
-//         'jokeId',
-//         'jokeSetUp',
-//         'jokePunchLine',
-//         'userId',
-//       ],
-//       include: [
-//         {
-//           model: Joke,
-//           attributes: ['JokeId', 'jokeSetUp', 'jokePunchLine', 'userId'],
-//         },
-//         // {
-//         //   model: User,
-//         //   attributes: ['username']
-//         // }
-//       ]
-//     })
-//     .then(postData => {
-//         const posts = postData.map(post => post.get({ plain: true }));
-//         res.render('dashboard', { posts, loggedIn: true });
-//       })
-//       .catch(err => {
-//         console.log(err);
-//         res.status(500).json(err);
-//       });
-//   });
 
 router.post('/', withAuth, async (req, res) => {
   try {

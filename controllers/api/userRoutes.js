@@ -14,15 +14,16 @@ router.get('/', (req, res) => {
   });
 
   router.get('/:id', (req, res) => {
+    const { id, name, email, password } = rec.params
     User.findOne({
       attributes: { exclude: ['password'] },
       where: {
-        id: req.params.id
+        id 
       },
       include: [
         {
-          model: Post,
-          attributes: [user_id, userData] //TODO: add all attributes
+          model: User,
+          attributes: [id, name, email, password ] //TODO: add all attributes
         },
         
       ]
