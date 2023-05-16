@@ -25,7 +25,7 @@ router.get('/:id', withAuth, (req, res) => {
 
   }
   // find one category by its `id` value
-  // be sure to include its associated Products
+  // be sure to include its associated Jokes
 });
 
 router.post('/', withAuth, async (req, res) => {

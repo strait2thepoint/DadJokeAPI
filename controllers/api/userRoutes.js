@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
       include: [
         {
           model: User,
-          attributes: [id, name, email, password ] //TODO: add all attributes
+          attributes: [id, name, email, password ] //this was broken once, But Mark walked us through how to fix it
         },
         
       ]
