@@ -1,8 +1,7 @@
 module.exports = {
-  format_date: (date) => {
-    // Format date as MM/DD/YYYY
-    return date.toLocaleDateString();
-  },
+  
+  // a format_date helper function used to be here. It was removed to help resolve an error in GETting /joke/:id, by Dennis
+  
   format_amount: (amount) => {
     // format large numbers with commas
     return parseInt(amount).toLocaleString();
