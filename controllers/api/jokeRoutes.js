@@ -1,34 +1,51 @@
 const router = require('express').Router();
-const { Joke, User } = require('../../models');
+const { Joke } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/', withAuth, (req, res) => {
-  try {
-    const jokeData = Joke.findAll();
-    res.status(200).json(jokeData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+router.get('/', (req, res) => {
+  Joke.findAll({
+    attributes: ['jokeId', 'jokeSetUp', 'jokePunchLine', 'userId'],
+  })
+    .then(jokes => {
+      res.json(jokes);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
 });
 
-router.get('/:id', withAuth, (req, res) => {
-  try {
-    const jokeData = Joke.findByPk(req.params.id, {
-      include: [{ model: User }]
+router.get('/:id', (req, res) => {
+  const { jokeId, jokeSetUp, jokePunchLine, userId } = rec.params
+  Joke.findOne({
+    //  attributes: { exclude: ['password'] },
+    where: {
+      id
+    },
+    include: [
+      {
+        model: Joke,
+        attributes: [jokeId, jokeSetUp, jokePunchLine, userId] //this was broken once, But Mark walked us through how to fix it
+      },
 
+    ]
+  })
+    .then(jokeData => {
+      if (!jokeData) {
+        res.status(404).json({ message: 'No joke found' });
+        return;
+      }
+      res.json(jokeData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
     });
-    res.status(200).json(jokeData);
-
-  }
-  catch (err) {
-    res.status(500).json(err);
-
-  }
   // find one category by its `id` value
   // be sure to include its associated Jokes
 });
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newJoke = await Joke.create({
       ...req.body,
@@ -41,7 +58,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const jokeData = await Joke.destroy({
       where: {
