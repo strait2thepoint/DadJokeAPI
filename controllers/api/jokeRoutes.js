@@ -52,24 +52,23 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
-  try {
-    const jokeData = await Joke.destroy({
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
-    });
-
-    if (!jokeData) {
-      res.status(404).json({ message: 'No Joke found with this id!' });
-      return;
+router.delete('/:id', (req, res) => {
+  Joke.destroy({
+    where: {
+      jokeId: req.params.id
     }
-
-    res.status(200).json(jokeData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+  })
+    .then(affectedRows => {
+      if (affectedRows === 0) {
+        res.status(404).json({ message: 'No Joke found with this id' });
+        return;
+      }
+      res.json({ message: 'Joke deleted successfully' });
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
 });
 
 module.exports = router;
