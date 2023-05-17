@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Joke } = require('../../models');
+const { Joke, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
@@ -16,33 +16,27 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  const { jokeId, jokeSetUp, jokePunchLine, userId } = rec.params
   Joke.findOne({
-    //  attributes: { exclude: ['password'] },
     where: {
-      id
+      jokeId: req.params.id
     },
-    include: [
-      {
-        model: Joke,
-        attributes: [jokeId, jokeSetUp, jokePunchLine, userId] //this was broken once, But Mark walked us through how to fix it
-      },
-
-    ]
+    attributes: ['jokeId', 'jokeSetUp', 'jokePunchLine', 'userId'],
+    include: [{
+      model: User,
+      attributes: ['name']
+    }]
   })
-    .then(jokeData => {
-      if (!jokeData) {
-        res.status(404).json({ message: 'No joke found' });
+    .then(dbJokeData => {
+      if (!dbJokeData) {
+        res.status(404).json({ message: 'No Joke found' });
         return;
       }
-      res.json(jokeData);
+      res.json(dbJokeData);
     })
     .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
+      console.error(err);
+      res.status(500).json({ error: 'Internal Server Error' });
     });
-  // find one category by its `id` value
-  // be sure to include its associated Jokes
 });
 
 router.post('/', async (req, res) => {
