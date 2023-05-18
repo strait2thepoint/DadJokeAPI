@@ -5,17 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Groan Zone</title>
-  <link rel="stylesheet" href="../../public/css/jass.css">
-  <link rel="stylesheet" href="../../public/css/style.css">
+  <link rel="stylesheet" href="css/jass.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <div class ="background-image-element">
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <span for="img" src="../assets/Groan Zone.png"
-    aria-label="Groan Zone background bricks and neon sign"></span>
-        <a href="/">Groan Zone!</a>
+       
+        <a class = 'title' href="/">Groan Zone!</a>
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
@@ -35,10 +35,10 @@
       
     </footer>
   </div>
-
+</div>
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+  <script src="js/logout.js"></script>
   {{/if}}
 </body>
 

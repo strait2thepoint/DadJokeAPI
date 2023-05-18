@@ -31,7 +31,7 @@ const sess = {
 
 app.use(session(sess));
 
-// Inform Express.js on which template engine to use
+// Inform Express.js on which template engine to use- the lines below place our handlebars at the root folder
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 

@@ -1,3 +1,4 @@
+//rename this page topFive???
 const newFormHandler = async (event) => {
   event.preventDefault();
 
@@ -14,7 +15,7 @@ const newFormHandler = async (event) => {
   //   });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/profile');//rename topFive?
     } else {
       alert('Failed to create project');
     }

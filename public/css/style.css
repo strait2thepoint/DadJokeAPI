@@ -1,11 +1,17 @@
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
-body {
+.background-image-element {
   background-image: url("../assets/Groan_Zone.png");
   background-color: #040557;
- }
+  background-size: cover;
+}
+
+.title{
+  border: 1px solid #040557;
+}
 
 .no-button {
   background: none;
