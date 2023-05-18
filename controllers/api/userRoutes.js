@@ -85,12 +85,20 @@ router.post('/login', async (req, res) => {
 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
-    req.session.destroy(() => {
+    req.session.destroy(err => {
+      if (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Failed to destroy session' });
+        return;
+      }
       res.status(204).end();
     });
   } else {
-    res.status(404).end();
+    res.status(404).json({ error: 'No active session found' });
   }
 });
+
+
+
 
 module.exports = router;
