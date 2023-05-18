@@ -3,10 +3,15 @@ header,
   border-bottom: 1px solid #ccc;
 }
 
+body {
+height: 100vh;
+}
+
 .background-image-element {
-  background-image: url("../assets/Groan_Zone.png");
-  background-color: #040557;
+  background-image: url("/Groan_Zone.png");
+  /* background-color: #040557; */
   background-size: cover;
+  height: 100%;
 }
 
 .title{
