@@ -71,4 +71,44 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+// upvotes a joke (test route is http://localhost:3001/api/jokes/upvote/X , where 'X' is 'jokeId')
+router.put('/upvote/:id', async (req, res) => {
+  try {
+    const joke = await Joke.findByPk(req.params.id);
+    
+    if (!joke) {
+      res.status(404).json({ message: 'No Joke found' });
+      return;
+    }
+
+    joke.jokeRating += 1;
+    await joke.save();
+
+    res.status(200).json(joke);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+// downvotes a joke (test route is http://localhost:3001/api/jokes/downvote/X , where 'X' is 'jokeId')
+router.put('/downvote/:id', async (req, res) => {
+  try {
+    const joke = await Joke.findByPk(req.params.id);
+    
+    if (!joke) {
+      res.status(404).json({ message: 'No Joke found' });
+      return;
+    }
+
+    joke.jokeRating -= 1;
+    await joke.save();
+
+    res.status(200).json(joke);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 module.exports = router;

@@ -20,6 +20,11 @@ Joke.init(
       type: DataTypes.STRING(120),
       allowNull: false,
     },
+    jokeRating: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
