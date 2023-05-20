@@ -8,14 +8,14 @@
   <div class="col-md-6">
     <h3>Create a New Joke</h3>
 
-    <form class="form new-project-form">
+    <form class="form new-joke-form">
       <div class="form-group">
-        <label for="project-name">jokeSetUp:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
+        <label for="joke-name">jokeSetUp:</label>
+        <input class="form-input" type="text" id="joke-name" name="joke-name" />
       </div>
       <div class="form-group">
-        <label for="project-desc">jokePunchLine:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+        <label for="joke-desc">jokePunchLine:</label>
+        <textarea class="form-input" id="joke-desc" name="joke-desc"></textarea>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>
@@ -24,13 +24,13 @@
   </div>
 
   {{#if jokes.length}}
-  <div class="col-md-6 project-list">
+  <div class="col-md-6 joke-list">
     <h3>Current jokes:</h3>
 
     {{#each jokes as |joke|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{joke.jokeId}}">{{joke.jokeSetUp}}</a></h4>
+        <h4><a href="/profile/{{joke.jokeId}}">{{joke.jokeSetUp}}</a></h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{joke.jokeId}}">DELETE</button>
