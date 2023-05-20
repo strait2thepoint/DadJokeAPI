@@ -35,13 +35,12 @@ height: 100vh;
   margin-left: -5px;
 }
 
-.formBox{
+.form{
   width: 75%;
   justify-content: center;
   align-items: center;
-  height: 75vh;
-  padding-top: 200px;
-  
+  height: 60vh;
+  padding-top: 350px;
 }
 
 .loginButton{
@@ -51,6 +50,7 @@ width: 100%;
 /*margin: 0.625rem 0;*/
 margin-left: 200px;
 color: #39c5ef;
+box-shadow: 0 0 10px 2px #040557;
 justify-content: center;
 align-items: center;
 text-align: center;
@@ -64,6 +64,10 @@ font-size: 30px;
 .loginButton:hover{
 text-decoration: none;
 color: #39c5ef;
+cursor: pointer;
+box-shadow: 0 0 10px 2px #040557;
+transform: translateY(0.1rem);
+transition: transform 150ms;
 }
 
 .loginButton:active{
@@ -75,7 +79,7 @@ color: #39c5ef;
   color: #39c5ef;
 }
 
-logoutButton{
+.logoutButton{
   color: red;
 }
 
