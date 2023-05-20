@@ -43,3 +43,42 @@ height: 100vh;
   padding-top: 200px;
   
 }
+
+.loginButton{
+text-decoration: none;
+display: block;
+width: 100%;
+/*margin: 0.625rem 0;*/
+margin-left: 200px;
+color: #39c5ef;
+justify-content: center;
+align-items: center;
+text-align: center;
+/*padding-left: 50px; */
+font-weight: bold;
+border-style: solid;
+border-color: #39c5ef;
+font-size: 30px;
+}
+
+.loginButton:hover{
+text-decoration: none;
+color: #39c5ef;
+}
+
+.loginButton:active{
+  color: #fd8cd7;
+}
+
+.loginButton:visited{
+  text-decoration: none;
+  color: #39c5ef;
+}
+
+logoutButton{
+  color: red;
+}
+
+#btn, btn-primary{
+  background-color: #39c5ef;
+}

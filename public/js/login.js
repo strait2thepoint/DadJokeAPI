@@ -1,3 +1,6 @@
+var loginElement = document.getElementById("loginButton");
+loginElement.style.display = "none";
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 

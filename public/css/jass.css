@@ -161,6 +161,7 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */
+  background-color: #39c5ef;
 }
 
 /**
@@ -377,7 +378,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  color: #822f7d;
+  color: #39c5ef;
 }
 
 h3 {
@@ -1127,6 +1128,7 @@ form .form-group {
 form .form-input,
 form .form-textarea {
   display: block;
+  background-color: #39c5ef;
 }
 
 form select {
@@ -1713,4 +1715,31 @@ form [type='radio'] {
   .align-content-center-xl {
     align-content: center;
   }
+
+
+  /*nav{
+    float: right;
+    border: solid;
+    border-color: #39c5ef;
+    border-width: 10%;
+  }
+  nav a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #822f7d;
+    font-weight: bold;
+
+  }
+  
+  a:visited {
+    color: #822f7d;
+    text-decoration: none;
+  }
+  
+  a:active {
+    color: #822f7d;
+    text-decoration: none;
+  } */
+
 }
+
