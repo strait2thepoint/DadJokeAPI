@@ -30,4 +30,4 @@ async function editFormHandler(event) {
 
 }
 
-document.querySelector('.edit-blog-form').addEventListener('submit', editFormHandler);
+document.querySelector('.edit-joke-form').addEventListener('submit', editFormHandler);
