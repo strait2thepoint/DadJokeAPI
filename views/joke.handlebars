@@ -1,18 +1,14 @@
 <div class="text-center">
+{{#each jokes}}
   <h2>{{jokeSetUp}}</h2>
 
   <p>{{jokePunchLine}}</p>
   <p>Created by {{user.name}}</p>
-  <p>
-    <span for="img" src="../assets/Groan Zone.png" aria-label="Groan Zone background bricks and neon sign"></span>
-
-  </p>
+{{/each}}
   <p>
     <button class="btn btn-primary">Submit</button>
   </p>
 </div>
 
-{{#each jokes}}
-<p>{{jokeSetUp}}</p>
-<p>{{jokePunchLine}}</p>
-{{/each}}
+{{!-- <p>{{jokeSetUp}}</p>
+<p>{{jokePunchLine}}</p> --}}

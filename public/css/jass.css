@@ -383,6 +383,8 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
+  color: #fd8cd7;
+
 }
 
 h4 {
@@ -1113,18 +1115,17 @@ a:hover {
 }
 
 form {
-  width: 100%;
+  width: 110%;
 }
 
 form .form-group {
   display: block;
-  width: 100%;
+  width: 110%;
   margin: 0.625rem 0;
   color: white;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-left: 50px;
 }
 
 form .form-input,
@@ -1136,7 +1137,7 @@ form .form-textarea {
 form select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='../assets/Groan_Zone.png'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+
   background-repeat: no-repeat;
   background-position-x: 98%;
   background-position-y: 50%;
@@ -1152,8 +1153,8 @@ form .form-label {
 form .form-input {
   width: 100%;
   padding: 0.75rem;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: #040557;
+  background-color: #fffffff5;
   margin: 0.625rem 0;
   font-size: 1.2rem;
   border: 1px solid #484848;
