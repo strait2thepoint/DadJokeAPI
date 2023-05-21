@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Joke, User } = require('../models');
 const withAuth = require('../utils/auth');
-​
+
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
@@ -13,10 +13,10 @@ router.get('/', async (req, res) => {
         },
       ],
     });
-​
+
     // Serialize data so the template can read it
     const jokes = jokeData.map((joke) => joke.get({ plain: true }));
-​
+    
     // Pass serialized data and session flag into template
     res.render('homepage', {
       jokes,
@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-​
+
 router.get('/jokes/:id', async (req, res) => {
   try {
     const jokeData = await Joke.findByPk(req.params.id, {
@@ -37,12 +37,9 @@ router.get('/jokes/:id', async (req, res) => {
         },
       ],
     });
-​
-​
-​
+
     const joke = jokeData.get({ plain: true });
-​
-    res.render('allJokes', {
+res.render('allJokes', {
       ...joke,
       logged_in: req.session.logged_in
     });
@@ -50,7 +47,7 @@ router.get('/jokes/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-​
+
 // Use withAuth middleware to prevent access to route
 router.get('/allJokes', withAuth, async (req, res) => {
   try {
@@ -59,9 +56,9 @@ router.get('/allJokes', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [{ model: Joke }],
     });
-​
+
     const user = userData.get({ plain: true });
-​
+
     res.render('allJokes', {
       ...user,
       logged_in: true
@@ -70,16 +67,16 @@ router.get('/allJokes', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-​
+
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/allJokes');
     return;
   }
-​
+
   res.render('login');
 });
-​
+
 module.exports = router;
 
