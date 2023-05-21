@@ -1,8 +1,8 @@
 async function newFormHandler(event) {
     event.preventDefault();
 
-    const jokeSetUp = document.querySelector('input[name=" jokeSetUp"]').value;
-    const jokePunchLine = document.querySelector('input[name=" jokePunchLine"]').value;
+    const jokeSetUp = document.querySelector('input[name="jokeSetUp"]').value;
+    const jokePunchLine = document.querySelector('input[name="jokePunchLine"]').value;
 
     const response = await fetch(`/api/jokes`, {
         method: 'POST',
