@@ -1,13 +1,10 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-    <h3>Create a New Joke</h3>
+<div class="thewholeshebang">
+<div class="cssNJ">
+  <h2>Welcome, {{name}}!</h2>
+  <h3>Create a New Joke</h3>
   </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-md-9">
-    <form class="form new-joke-form">
+  <div class="newjokegroup">
+    <form>
       <div class="form-group">
         <label for="joke-name">Joke Question:</label>
         <input class="form-input" type="text" id="joke-name" name="joke-name" />
@@ -21,23 +18,19 @@
       </div>
     </form>
   </div>
-
   {{#if jokes.length}}
-  <div class="col-md-6 joke-list">
     <h3>Current jokes:</h3>
-    {{!--
-    {{#each jokes as |joke|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/jokes/{{joke.jokeId}}">{{joke.jokeSetUp}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{joke.jokeId}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}} --}}
-  </div>
-  {{/if}}
-</div>
 
+    {{#each jokes as |joke|}}
+    <h4><a href="/jokes/{{joke.jokeId}}">{{joke.jokeSetUp}}</a></h4>
+    <div class="col-md-4">
+      <button class="btn btn-sm btn-danger" data-id="{{joke.jokeId}}">DELETE</button>
+      {{!--
+    </div> --}}
+  </div>
+  {{/each}}
+</div>
+{{/if}}
+</div>
+</div>
 <script src="/js/allJokes.js"></script>

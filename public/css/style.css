@@ -138,15 +138,18 @@ btn-primary {
   color: #39c5ef;
 }
 
-.col-auto{
-margin-top: 35vh;
-margin-right: 8vw;
-margin-bottom: 0;
+.thewholeshebang{
+max-height: 70vh;
 }
 
-#newjoke{
-} /*line 8-10 in allJokes.handlebars is causing white space on the bottom of the page and needs adjustment*/
+.cssNJ{
+margin-top: 35vh;
+margin-bottom: 0;
+max-height: 100vh;
+margin-left: 33.5vw;
+}
 
-.new-joke-form{
-max-height: 200px;
+.newjokegroup{
+margin-left: 13.5vw;
+margin-right: 23vw;
 }
