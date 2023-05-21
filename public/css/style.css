@@ -17,15 +17,17 @@ body {
   text-decoration: none;
   display: block;
   width: 100%;
-  color: #39c5ef;
-  box-shadow: 0 0 10px 2px #040557;
+  color: #fd8cd7;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-weight: bold;
   border-style: solid;
-  border-color: #18667e;
+  border-color: #fd8cd7;
   font-size: 30px;
+  margin-left: 30vw;
+  margin-top: 65vh;
+  padding: 3px;
 }
 
 .no-button {
