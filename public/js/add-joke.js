@@ -1,3 +1,4 @@
+//Overall, this code handles form submission, sends a POST request to create a new joke using the form input values, and handles the response accordingly.
 async function newFormHandler(event) {
     event.preventDefault();
 

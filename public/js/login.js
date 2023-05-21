@@ -1,3 +1,4 @@
+//this code handles the submission of login and signup forms. It collects the form input values, sends appropriate requests to the server API, and redirects the user to a specific page based on the response received from the server.
 var loginElement = document.getElementById("loginButton");
 loginElement.style.display = "none";
 
