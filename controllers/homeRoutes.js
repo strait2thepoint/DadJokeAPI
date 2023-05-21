@@ -39,7 +39,7 @@ router.get('/jokes/:id', async (req, res) => {
     });
 
     const joke = jokeData.get({ plain: true });
-res.render('allJokes', {
+res.render('/joke', {
       ...joke,
       logged_in: req.session.logged_in
     });
