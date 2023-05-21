@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const { Joke, User } = require('../../models');
-const withAuth = require('../../utils/auth');
+// const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
   Joke.findAll({
     attributes: ['jokeId', 'jokeSetUp', 'jokePunchLine', 'userId'],
   })
     .then(jokes => {
-      res.json(jokes);
+      res.render('joke',{jokes});
     })
     .catch(err => {
       console.error(err);
@@ -31,7 +31,7 @@ router.get('/:id', (req, res) => {
         res.status(404).json({ message: 'No Joke found' });
         return;
       }
-      res.json(dbJokeData);
+      res.render('joke',dbJokeData);
     })
     .catch(err => {
       console.error(err);
