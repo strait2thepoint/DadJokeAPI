@@ -1,8 +1,8 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const jokeSetUp = document.querySelector('#jokeSetUp').value.trim();
-  const jokePunchLine = document.querySelector('#jokePunchLine').value.trim();
+  const jokeSetUp = document.querySelector('#joke-name').value.trim();
+  const jokePunchLine = document.querySelector('#joke-desc').value.trim();
 
 
   if (jokeSetUp && jokePunchLine) {
@@ -15,7 +15,7 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/');
     } else {
       alert('Failed to create joke');
     }
@@ -31,7 +31,7 @@ const delButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/');
     } else {
       alert('Failed to delete joke');
     }
