@@ -29,18 +29,12 @@ height: 100vh;
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
-}
-
 .form{
   width: 75%;
   justify-content: center;
   align-items: center;
   height: 60vh;
-  padding-top: 350px;
+  padding-top: 300px;
 }
 
 .loginButton{
@@ -48,7 +42,6 @@ text-decoration: none;
 display: block;
 width: 100%;
 /*margin: 0.625rem 0;*/
-margin-left: 200px;
 color: #39c5ef;
 box-shadow: 0 0 10px 2px #040557;
 justify-content: center;
@@ -57,13 +50,14 @@ text-align: center;
 /*padding-left: 50px; */
 font-weight: bold;
 border-style: solid;
-border-color: #39c5ef;
+border-color: #18667e;
 font-size: 30px;
 }
 
 .loginButton:hover{
 text-decoration: none;
-color: #39c5ef;
+color: #fd8cd7; /* COLORS For buttons 1013 area jass*/
+border-color: #18667e;
 cursor: pointer;
 box-shadow: 0 0 10px 2px #040557;
 transform: translateY(0.1rem);
@@ -86,3 +80,40 @@ transition: transform 150ms;
 #btn, btn-primary{
   background-color: #39c5ef;
 }
+
+
+.submitButton{
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  /*margin: 0.625rem 0;*/
+  color: #39c5ef;
+  box-shadow: 0 0 10px 2px #040557;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /*padding-left: 50px; */
+  font-weight: bold;
+  border-style: solid;
+  border-color: #18667e;
+  font-size: 30px;
+  }
+  
+  .submitButton:hover{
+  text-decoration: none;
+  color: #fd8cd7;
+  border-color: #18667e;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px #040557;
+  transform: translateY(0.1rem);
+  transition: transform 150ms;
+  }
+  
+  .submitButton:active{
+    color: #fd8cd7;
+  }
+  
+  .submitButton:visited{
+    text-decoration: none;
+    color: #39c5ef;
+  }
