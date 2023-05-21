@@ -1,4 +1,4 @@
-<div class="text-center">
+{{!-- <div class="text-center">
 {{#each jokes}}
   <h2>{{jokeSetUp}}</h2>
 
@@ -8,7 +8,16 @@
   <p>
     <button class="btn btn-primary">Submit</button>
   </p>
-</div>
-
+</div> --}}
+{{!above is our code, starting line 16 is chatGPT}}
 {{!-- <p>{{jokeSetUp}}</p>
 <p>{{jokePunchLine}}</p> --}}
+
+{{#each jokes}}
+  <div class="joke">
+    <h2>{{jokeSetUp}}</h2>
+    <p>{{jokePunchLine}}</p>
+    <p>Rating: {{jokeRating}}</p>
+    <p>Submitted by: {{user.name}}</p>
+  </div>
+{{/each}}
