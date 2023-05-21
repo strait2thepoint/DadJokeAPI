@@ -42,7 +42,7 @@ router.get('/jokes/:id', async (req, res) => {
 
     const joke = jokeData.get({ plain: true });
 
-    res.render('joke', {
+    res.render('allJokes', {
       ...joke,
       logged_in: req.session.logged_in
     });
@@ -62,7 +62,7 @@ router.get('/allJokes', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('login', {
+    res.render('allJokes', {
       ...user,
       logged_in: true
     });
