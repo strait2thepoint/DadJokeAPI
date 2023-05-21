@@ -140,6 +140,9 @@ margin-right: 8vw;
 margin-bottom: 0;
 }
 
+#newjoke{
+} /*line 8-10 in allJokes.handlebars is causing white space on the bottom of the page and needs adjustment*/
+
 .new-joke-form{
-  height: 545vh;
+max-height: 200px;
 }
