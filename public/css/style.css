@@ -135,5 +135,11 @@ btn-primary {
 }
 
 .col-auto{
-margin-top: 45vh;
+margin-top: 35vh;
+margin-right: 8vw;
+margin-bottom: 0;
+}
+
+.new-joke-form{
+  height: 545vh;
 }
