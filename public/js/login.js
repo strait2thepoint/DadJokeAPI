@@ -18,7 +18,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace('/allJokes');
+      document.location.replace('/allJokes');//rename profile to "topFive?"
     } else {
       alert(response.statusText);
     }
@@ -54,3 +54,5 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+  //should allJokes be replaced by joke?

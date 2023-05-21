@@ -45,3 +45,4 @@ document
 document
   .querySelector('.joke-list')
   .addEventListener('click', delButtonHandler);
+
