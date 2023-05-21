@@ -22,27 +22,27 @@ const newFormHandler = async (event) => {
   }
 };
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+// const delButtonHandler = async (event) => {
+//   if (event.target.hasAttribute('data-id')) {
+//     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/jokes/${id}`, {
-      method: 'DELETE',
-    });
+//     const response = await fetch(`/api/jokes/${id}`, {
+//       method: 'DELETE',
+//     });
 
-    if (response.ok) {
-      document.location.replace('/');
-    } else {
-      alert('Failed to delete joke');
-    }
-  }
-};
+//     if (response.ok) {
+//       document.location.replace('/');
+//     } else {
+//       alert('Failed to delete joke');
+//     }
+//   }
+// };
 
 document
   .querySelector('.new-joke-form')
   .addEventListener('submit', newFormHandler);
 
-document
-  .querySelector('.joke-list')
-  .addEventListener('click', delButtonHandler);
+// document
+//   .querySelector('.joke-list')
+//   .addEventListener('click', delButtonHandler);
 

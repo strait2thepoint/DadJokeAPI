@@ -10,28 +10,29 @@
 </head>
 
 <body>
-  <div class ="background-image-element">
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/allJokes">All Jokes</a> |
-        <button class="no-button" id="logout">Logout</button>
-        {{else}}
-        <a class='loginButton' id='loginButton' href="/login">Login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
+  <div class="background-image-element">
+    <div class="flex-column justify-space-around">
+      <header class="display-flex justify-space-between align-center p-2">
+        <nav>
+          <!-- Conditionally render login or logout links -->
+          {{#if logged_in}}
+
+          <a href="/allJokes">Add your own joke</a>
+          <button class="no-button" id="logout">Logout</button>
+          {{else}}
+          <a class='loginButton' id='loginButton' href="/login">Login</a>
+          {{/if}}
+        </nav>
+      </header>
+      <main class="container container-fluid mt-5">
+        <!-- Render the sub layout -->
+        {{{ body }}}
+      </main>
+      <footer>
+
+      </footer>
+    </div>
   </div>
-</div>
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="js/logout.js"></script>
