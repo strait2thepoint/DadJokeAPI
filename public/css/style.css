@@ -1,6 +1,5 @@
-
 body {
-height: 100vh;
+  height: 100vh;
 }
 
 .background-image-element {
@@ -10,8 +9,23 @@ height: 100vh;
   height: 100%;
 }
 
-.title{
+.title {
   border: 1px solid #040557;
+}
+
+#loginButton {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  color: #39c5ef;
+  box-shadow: 0 0 10px 2px #040557;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #18667e;
+  font-size: 30px;
 }
 
 .no-button {
@@ -29,7 +43,7 @@ height: 100vh;
   text-decoration: underline;
 }
 
-.form{
+.form {
   width: 75%;
   justify-content: center;
   align-items: center;
@@ -37,52 +51,52 @@ height: 100vh;
   padding-top: 45%;
 }
 
-.loginButton{
-text-decoration: none;
-display: block;
-width: 100%;
-/*margin: 0.625rem 0;*/
-color: #39c5ef;
-box-shadow: 0 0 10px 2px #040557;
-justify-content: center;
-align-items: center;
-text-align: center;
-/*padding-left: 50px; */
-font-weight: bold;
-border-style: solid;
-border-color: #18667e;
-font-size: 30px;
+/*main button jass file 974*/
+.loginButton {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  color: #39c5ef;
+  box-shadow: 0 0 10px 2px #040557;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #18667e;
+  font-size: 30px;
 }
 
-.loginButton:hover{
-text-decoration: none;
-color: #fd8cd7; /* COLORS For buttons 1013 area jass*/
-border-color: #18667e;
-cursor: pointer;
-box-shadow: 0 0 10px 2px #040557;
-transform: translateY(0.1rem);
-transition: transform 150ms;
+.loginButton:hover {
+  text-decoration: none;
+  color: #fd8cd7;
+  /* COLORS For buttons 1013 area jass*/
+  border-color: #18667e;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px #040557;
+  transform: translateY(0.1rem);
+  transition: transform 150ms;
 }
 
-.loginButton:active{
+.loginButton:active {
   color: #fd8cd7;
 }
 
-.loginButton:visited{
+.loginButton:visited {
   text-decoration: none;
   color: #39c5ef;
 }
 
-.logoutButton{
+.logoutButton {
   color: red;
 }
 
-#btn, btn-primary{
+#btn,
+btn-primary {
   background-color: #39c5ef;
 }
 
-
-.submitButton{
+.submitButton {
   text-decoration: none;
   display: block;
   width: 100%;
@@ -97,9 +111,9 @@ transition: transform 150ms;
   border-style: solid;
   border-color: #18667e;
   font-size: 30px;
-  }
-  
-  .submitButton:hover{
+}
+
+.submitButton:hover {
   text-decoration: none;
   color: #fd8cd7;
   border-color: #18667e;
@@ -107,13 +121,13 @@ transition: transform 150ms;
   box-shadow: 0 0 10px 2px #040557;
   transform: translateY(0.1rem);
   transition: transform 150ms;
-  }
-  
-  .submitButton:active{
-    color: #fd8cd7;
-  }
-  
-  .submitButton:visited{
-    text-decoration: none;
-    color: #39c5ef;
-  }
+}
+
+.submitButton:active {
+  color: #fd8cd7;
+}
+
+.submitButton:visited {
+  text-decoration: none;
+  color: #39c5ef;
+}
