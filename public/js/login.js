@@ -40,7 +40,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');//rename profile to "topFive?"
+      document.location.replace('/allJokes');//rename profile to "topFive?"
     } else {
       alert(response.statusText);
     }
