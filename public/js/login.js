@@ -18,7 +18,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace('/allJokes');//rename profile to "topFive?"
+      document.location.replace('/allJokes');//this is taking us to the create a joke page
     } else {
       alert(response.statusText);
     }
@@ -40,7 +40,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/allJokes');
+      document.location.replace('/allJokes');//taking us to the create a joke page
     } else {
       alert(response.statusText);
     }
