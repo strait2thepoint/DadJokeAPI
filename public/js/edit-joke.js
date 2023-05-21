@@ -1,3 +1,4 @@
+// this code handles the form submission event for an edit form. It retrieves the updated joke setup and punch line from the input fields, sends a PUT request to the server API to update the joke with the provided data, and performs appropriate actions based on the response received from the server.
 async function editFormHandler(event) {
     event.preventDefault();
 

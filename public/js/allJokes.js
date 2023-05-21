@@ -1,3 +1,4 @@
+//Overall, this code handles form submission to create jokes and button clicks to delete jokes. It communicates with the server-side API endpoints to perform these actions and updates the UI accordingly.
 const newFormHandler = async (event) => {
   event.preventDefault();
 
