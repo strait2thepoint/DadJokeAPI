@@ -18,7 +18,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace('/profile');//rename profile to "topFive?"
+      document.location.replace('/joke');//rename profile to "topFive?"
     } else {
       alert(response.statusText);
     }

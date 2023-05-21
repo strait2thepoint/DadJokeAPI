@@ -357,7 +357,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   color: #1a1a1a;
 }
@@ -378,7 +378,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  color: #39c5ef;
+  color: #fd8cd7;
 }
 
 h3 {
@@ -919,7 +919,7 @@ a:hover {
 
 /* BACKGROUND UTILS */
 .bg-primary {
-  background-color: #2d3e50 !important;
+  background-color: #39c5ef !important;
 }
 
 .bg-info {
@@ -927,7 +927,7 @@ a:hover {
 }
 
 .bg-danger {
-  background-color: #e64c66 !important;
+  background-color: #fd8cd7 !important;
 }
 
 .bg-light {
@@ -982,7 +982,7 @@ a:hover {
   border: 1px solid transparent;
   outline: none;
   color: #1a1a1a;
-  background-color: #aeaeae;
+  background-color: #39c5ef;;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
@@ -1011,8 +1011,8 @@ a:hover {
 }
 
 .btn.btn-primary {
-  background-color: #2d3e50;
-  color: #d9e9e8;
+  background-color: #39c5ef;
+  color: #040557;
 }
 
 .btn.btn-primary:hover {
