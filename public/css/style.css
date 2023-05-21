@@ -37,16 +37,24 @@ main{
 .no-button {
   background: none;
   border: none;
-  padding: 0;
+  padding: 5px;
   cursor: pointer;
-  color: #1b89bc;
   text-decoration: none;
   font-size: 100%;
+  border-style: solid;
+  color: #39c5ef;
+  border-color: #fd8cd7;
+  margin-left: 5px;
+  border-radius: 5px;
+
 }
 
 .no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+  color: #fd8cd7;
+  text-decoration: none;
+  border-style: solid;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .form {
@@ -152,4 +160,39 @@ margin-left: 33.5vw;
 .newjokegroup{
 margin-left: 13.5vw;
 margin-right: 23vw;
+}
+
+.jokeButton:visited{
+  text-decoration: none;
+  color: #39c5ef;
+  border-style: solid;
+  border-color: #fd8cd7;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.jokeButton:active{
+  text-decoration: none;
+  color: #39c5ef;
+  border-style: solid;
+  border-color: #fd8cd7;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.jokeButton:hover{
+  color: #fd8cd7;
+  text-decoration: none;
+  border-style: solid;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.jokeButton{
+  text-decoration: none;
+  color: #39c5ef;
+  border-style: solid;
+  border-color: #fd8cd7;
+  padding: 5px;
+  border-radius: 5px;
 }
