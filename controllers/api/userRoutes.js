@@ -98,6 +98,56 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// Assuming you have Express and other necessary dependencies imported
+
+router.post('/api/users', async (req, res) => {
+  try {
+    // Retrieve the user data from the request body
+    const { name, email, password } = req.body;
+
+    // Perform any necessary validation or checks on the input data
+
+    // Create a new user in the database using the received data
+    const newUser = await User.create({ name, email, password });
+
+    // Optionally, you can generate a JWT token or set a session to authenticate the user
+
+    // Respond with a success status code and any additional data you want to send
+    res.status(201).json({ message: 'User created successfully' });
+  } catch (error) {
+    // Handle any errors that occurred during the signup process
+    console.error(error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+// Assuming you have Express and other necessary dependencies imported
+
+router.post('/api/users/login', async (req, res) => {
+  try {
+    // Retrieve the user data from the request body
+    const { email, password } = req.body;
+
+    // Perform any necessary validation or checks on the input data
+
+    // Authenticate the user (e.g., by comparing the provided credentials with the stored user data in the database)
+    const user = await User.findOne({ email });
+
+    if (!user || !user.verifyPassword(password)) {
+      // If authentication fails, respond with an error message
+      return res.status(401).json({ message: 'Invalid email or password' });
+    }
+
+    // Optionally, you can generate a JWT token or set a session to authenticate the user
+
+    // Respond with a success status code and any additional data you want to send
+    res.status(200).json({ message: 'Login successful', user });
+  } catch (error) {
+    // Handle any errors that occurred during the login process
+    console.error(error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
 
 
 
