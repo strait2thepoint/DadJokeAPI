@@ -6,7 +6,7 @@
 </div>
 
 <div class="row mt-4">
-  <div class="col-md-4">
+  <div class="col-md-9">
     <form class="form new-joke-form">
       <div class="form-group">
         <label for="joke-name">Joke Question:</label>
@@ -29,7 +29,7 @@
     {{#each jokes as |joke|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/profile/{{joke.jokeId}}">{{joke.jokeSetUp}}</a></h4>
+        <h4><a href="/jokes/{{joke.jokeId}}">{{joke.jokeSetUp}}</a></h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{joke.jokeId}}">DELETE</button>
