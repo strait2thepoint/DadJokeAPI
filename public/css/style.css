@@ -2,6 +2,10 @@ body {
   height: 100vh;
 }
 
+main{
+  height: 100%;
+}
+
 .background-image-element {
   background-image: url("/Groan_Zone.png");
   /* background-color: #040557; */
