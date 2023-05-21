@@ -1013,10 +1013,12 @@ a:hover {
 .btn.btn-primary {
   background-color: #39c5ef;
   color: #040557;
+  box-shadow: 0 0 10px 2px #040557;
+
 }
 
 .btn.btn-primary:hover {
-  background-color: #57779a;
+  background-color: #0405576e;
 }
 
 .btn.btn-danger {
@@ -1265,7 +1267,7 @@ form [type='radio'] {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-left: 200px;
+  /* padding-left: 100px; */
   transform: translate(5%, -10%);
 }
 
