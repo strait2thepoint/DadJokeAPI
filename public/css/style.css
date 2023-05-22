@@ -199,7 +199,43 @@ btn-primary {
   border-radius: 5px;
 }
 
+
+.createJokeButton{
+  text-decoration: none;
+  color: #39c5ef;
+  border-style: solid;
+  border-color: #fd8cd7;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.createJokeButton:hover{
+  color: #fd8cd7;
+  text-decoration: none;
+  border-style: solid;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.createJokeButton:active{
+  text-decoration: none;
+  color: #39c5ef;
+  border-style: solid;
+  border-color: #fd8cd7;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.createJokeButton:visited{
+  text-decoration: none;
+  color: #39c5ef;
+  border-style: solid;
+  border-color: #fd8cd7;
+  padding: 5px;
+  border-radius: 5px;
+
 .jokeContainer{
 margin-top: 33.5vh;
 margin-left: 20%;
+
 }
