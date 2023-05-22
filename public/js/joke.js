@@ -15,7 +15,7 @@ myDiv.addEventListener('click', function() {
   iframe.frameBorder = '0';
   iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
   iframe.allowFullscreen = true;
-  
+  //
   // Append the iframe element to the div
   myDiv.appendChild(iframe);
 });
