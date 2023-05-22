@@ -17,6 +17,22 @@ Visitors can register a user account, or login to a pre-existing account. Regist
 
 <hr>
 
+## User Story
+
+AS a developer, I want to have a website that displays jokes written by other users.
+
+WHEN a user or a joke if added or removed in a local instance,
+
+THEN that change is reflected in the globally hosted database.
+
+WHEN a user impliments the delete feature,
+
+THEN that user can add or delete jokes that they and only they have written.
+
+WHEN I access the webpage on any different platform,
+
+THEN the elements of the webpage are responsive and in compliance with formatting standards and best practices.
+
 ## Table of Contents
 
  *  [Installation](#installation)
