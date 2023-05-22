@@ -57,14 +57,19 @@ https://github.com/strait2thepoint/DadJokeAPI
 ### Test routes (append these after http://loclahost:3001):
 
 /api/login              <-- POST only (log in a user)
+
 /api/logout             <-- POST only (log out a user)
 
 /api/users              <-- GET or POST (see a JSONified list of all users' data)
+
 /api/users/:id          <-- GET         (see an individual user's data JSONified)
 
 /api/jokes              <-- GET or POST    (see JSONified data for all jokes, or POST a new joke in JSON format)
+
 /api/jokes/:id          <-- GET or DELETE  (see JSONified data for an individual joke, or DELETE an individual joke)
+
 /api/jokes/upvote/:id   <-- PUT only       (alter the RATING data of an individual joke by incrementing it)
+
 /api/jokes/downvote/:id <-- PUT only       (alter the RATING data of an individual joke by decrementing it)
 
 ## License
