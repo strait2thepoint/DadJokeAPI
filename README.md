@@ -16,14 +16,41 @@ Visitors can register a user account, or login to a pre-existing account. Regist
 
 <hr>
 
+## Table of Contents
+
+ *  [Installation](#installation)
+ *  [Usage](#usage)
+ *  [Screenshot](#screenshot)
+ *  [Testing](#testing)
+
+
+
+## Installation
+1. Install Node.js v16.
+2. Intsatll Mysql 8.0
+3. Install inquirer, please use npm i inquirer@8.2.4
+4. To connect with database, create file .env to store username, database name and password.
+5. Run command npm install.
+6. Navigate to db directory and run command "SOURCE schema.sql";
+7. Navigate to seeds directory and run "node seeds/seed.js";
+8. Now restart server by using command "npm start"
+
 ## Usage
-The site will be hosted on a heroku server soon! In the meantime, the repository is available at:
+
+The repository is available at:
 
 https://github.com/strait2thepoint/DadJokeAPI
+
+
+## Testing
+
+1. Stop server by using command "ctrl c"
+2. Navigate to db directory and run command "SOURCE schema.sql";
+3. Navigate to seeds directory and run "node seeds/seed.js";
+4. Now restart server by using command "npm start"
 
 ## License
 
 GNU General Public License v3.0 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-## Troubleshooting
-If you are getting an error message, please restart your server (npm start) and see if that fixes the issue.
+
