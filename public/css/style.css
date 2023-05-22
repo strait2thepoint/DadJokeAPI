@@ -200,12 +200,12 @@ btn-primary {
   border-radius: 5px;
 }
 
-.jokeContainer{
-margin-top: 33.5vh;
-margin-left: 20%;
+.jokeContainer {
+  margin-top: 33.5vh;
+  margin-left: 20%;
 }
 
-.createJokeButton{
+.createJokeButton {
   text-decoration: none;
   color: #39C5EF;
   border-style: solid;
@@ -213,14 +213,16 @@ margin-left: 20%;
   padding: 5px;
   border-radius: 5px;
 }
-.createJokeButton:hover{
+
+.createJokeButton:hover {
   color: #FD8CD7;
   text-decoration: none;
   border-style: solid;
   padding: 5px;
   border-radius: 5px;
 }
-.createJokeButton:active{
+
+.createJokeButton:active {
   text-decoration: none;
   color: #39C5EF;
   border-style: solid;
@@ -228,11 +230,33 @@ margin-left: 20%;
   padding: 5px;
   border-radius: 5px;
 }
-.createJokeButton:visited{
+
+.createJokeButton:visited {
   text-decoration: none;
   color: #39C5EF;
   border-style: solid;
   border-color: #FD8CD7;
   padding: 5px;
   border-radius: 5px;
+}
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+  header {
+    background: #772014;
+  }
+}
+
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+  nav {
+    background-color: #bb8588;
+  }
+}
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+  .sample-img {
+    background-color: #8ac4ff;
+  }
 }
