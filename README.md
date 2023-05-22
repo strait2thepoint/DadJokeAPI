@@ -61,7 +61,9 @@ https://github.com/strait2thepoint/DadJokeAPI
 
 ## Screenshot
 
-![The login screen in a normalized Chrome window](./public/login_screencap.png)
+![The 'add joke' screen in a maximized Chrome window](./public/screencap_addjoke.png)
+
+![The 'view all jokes' screen in a maximized Chrome window](./public/screencap_alljokes.png)
 
 ## Testing
 
