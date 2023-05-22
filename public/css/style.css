@@ -9,6 +9,7 @@ main {
 
 .background-image-element {
   background-image: url("/Groan_Zone.png");
+  background-repeat: repeat-y;
   /* background-color: #040557; */
   background-size: cover;
   height: 100%;
@@ -198,6 +199,7 @@ btn-primary {
   border-radius: 5px;
 }
 
+
 .createJokeButton{
   text-decoration: none;
   color: #39c5ef;
@@ -231,4 +233,9 @@ btn-primary {
   border-color: #fd8cd7;
   padding: 5px;
   border-radius: 5px;
+
+.jokeContainer{
+margin-top: 33.5vh;
+margin-left: 20%;
+
 }
