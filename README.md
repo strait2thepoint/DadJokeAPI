@@ -3,6 +3,7 @@ The Groan Zone is a website with a simple, blog-like layout. The content is inte
 
 <hr>
 
+![Node.js](https://img.shields.io/badge/Nodejs-16.18.0-blue.svg)
 ![Express.js](https://img.shields.io/badge/Express.js-4.17.1-blue.svg)
 ![Handlebars.js](https://img.shields.io/badge/Handlebars.js-4.7.7-blue.svg)
 ![Normalize.css](https://img.shields.io/badge/Normalize.css-8.0.1-blue.svg)
@@ -27,13 +28,14 @@ Visitors can register a user account, or login to a pre-existing account. Regist
 
 ## Installation
 1. Install Node.js v16.
-2. Intsatll Mysql 8.0
+2. Intsall Mysql 8.0
 3. Install inquirer, please use npm i inquirer@8.2.4
 4. To connect with database, create file .env to store username, database name and password.
 5. Run command npm install.
-6. Navigate to db directory and run command "SOURCE schema.sql";
-7. Navigate to seeds directory and run "node seeds/seed.js";
-8. Now restart server by using command "npm start"
+6. Navigate to db directory and run command "SOURCE schema.sql".
+7. Tell MySQL to "USE joke_db;".
+8. Navigate to seeds directory and run "node seeds/seed.js".
+9. Now restart server by using command "npm start"
 
 ## Usage
 
@@ -41,6 +43,9 @@ The repository is available at:
 
 https://github.com/strait2thepoint/DadJokeAPI
 
+## Screenshot
+
+![The login screen in a normalized Chrome window](./public/login_screencap.png)
 
 ## Testing
 
@@ -48,6 +53,19 @@ https://github.com/strait2thepoint/DadJokeAPI
 2. Navigate to db directory and run command "SOURCE schema.sql";
 3. Navigate to seeds directory and run "node seeds/seed.js";
 4. Now restart server by using command "npm start"
+
+### Test routes (append these after http://loclahost:3001):
+
+/api/login              <-- POST only (log in a user)
+/api/logout             <-- POST only (log out a user)
+
+/api/users              <-- GET or POST (see a JSONified list of all users' data)
+/api/users/:id          <-- GET         (see an individual user's data JSONified)
+
+/api/jokes              <-- GET or POST    (see JSONified data for all jokes, or POST a new joke in JSON format)
+/api/jokes/:id          <-- GET or DELETE  (see JSONified data for an individual joke, or DELETE an individual joke)
+/api/jokes/upvote/:id   <-- PUT only       (alter the RATING data of an individual joke by incrementing it)
+/api/jokes/downvote/:id <-- PUT only       (alter the RATING data of an individual joke by decrementing it)
 
 ## License
 
