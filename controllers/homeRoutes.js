@@ -89,10 +89,11 @@ router.get('/allJokes', withAuth, async (req, res) => {
 
 router.get('/jokes', (req, res) => {
   Joke.findAll({
+    attributes: ['jokeId', 'jokeSetUp', 'jokePunchLine', 'jokeRating', 'userId'],
     include: [
       {
         model: User,
-        attributes: ['email'],
+        attributes: ['name'],
       },
     ],
   })
