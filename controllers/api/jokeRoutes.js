@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     attributes: ['jokeId', 'jokeSetUp', 'jokePunchLine', 'userId'],
   })
     .then(jokes => {
-      res.render('joke',{jokes});
+      res.render('joke', { jokes });
     })
     .catch(err => {
       console.error(err);
@@ -31,7 +31,7 @@ router.get('/:id', (req, res) => {
         res.status(404).json({ message: 'No Joke found' });
         return;
       }
-      res.render('joke',dbJokeData);
+      res.render('joke', dbJokeData);
     })
     .catch(err => {
       console.error(err);
@@ -43,7 +43,7 @@ router.post('/', async (req, res) => {
   try {
     const newJoke = await Joke.create({
       ...req.body,
-      user_id: req.session.user_id,
+      userId: req.session.user_id,
     });
 
     res.status(200).json(newJoke);
@@ -75,7 +75,7 @@ router.delete('/:id', (req, res) => {
 router.put('/upvote/:id', async (req, res) => {
   try {
     const joke = await Joke.findByPk(req.params.id);
-    
+
     if (!joke) {
       res.status(404).json({ message: 'No Joke found' });
       return;
@@ -95,7 +95,7 @@ router.put('/upvote/:id', async (req, res) => {
 router.put('/downvote/:id', async (req, res) => {
   try {
     const joke = await Joke.findByPk(req.params.id);
-    
+
     if (!joke) {
       res.status(404).json({ message: 'No Joke found' });
       return;

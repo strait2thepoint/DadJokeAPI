@@ -1,10 +1,10 @@
 {{!-- <div class="text-center">
-{{#each jokes}}
+  {{#each jokes}}
   <h2>{{jokeSetUp}}</h2>
 
   <p>{{jokePunchLine}}</p>
   <p>Created by {{user.name}}</p>
-{{/each}}
+  {{/each}}
   <p>
     <button class="btn btn-primary">Submit</button>
   </p>
@@ -14,10 +14,10 @@
 <p>{{jokePunchLine}}</p> --}}
 
 {{#each jokes}}
-  <div class="joke">
-    <h2>{{jokeSetUp}}</h2>
-    <p>{{jokePunchLine}}</p>
-    <p>Rating: {{jokeRating}}</p>
-    <p>Submitted by: {{user.name}}</p>
-  </div>
+<div class="joke">
+  <h2>{{jokeSetUp}}</h2>
+  <p>{{jokePunchLine}}</p>
+  <p>Rating: {{jokeRating}}</p>
+  <p>Submitted by: {{user.name}}</p>
+</div>
 {{/each}}

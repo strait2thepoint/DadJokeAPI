@@ -1,10 +1,10 @@
 <div class="thewholeshebang">
-<div class="cssNJ">
-  <h2>Welcome, {{name}}!</h2>
-  <h3>Create a New Joke</h3>
+  <div class="cssNJ">
+    <h2>Welcome, {{name}}!</h2>
+    <h3>Create a New Joke</h3>
   </div>
   <div class="newjokegroup">
-    <form>
+    <form id="new-joke-form">
       <div class="form-group">
         <label for="joke-name">Joke Question:</label>
         <input class="form-input" type="text" id="joke-name" name="joke-name" />
@@ -19,17 +19,17 @@
     </form>
   </div>
   {{#if jokes.length}}
-    <h3>Current jokes:</h3>
+  <h3>Current jokes:</h3>
 
-    {{#each jokes as |joke|}}
-    <h4><a href="/jokes/{{joke.jokeId}}">{{joke.jokeSetUp}}</a></h4>
-    <div class="col-md-4">
-      <button class="btn btn-sm btn-danger" data-id="{{joke.jokeId}}">DELETE</button>
+  {{#each jokes as |joke|}}
+  <h4><a href="/jokes/{{joke.jokeId}}">{{joke.jokeSetUp}}</a></h4>
+  <div class="col-md-4">
+    <button class="btn btn-sm btn-danger" data-id="{{joke.jokeId}}">DELETE</button>
   </div>
   {{/each}}
 </div>
 {{/if}}
 </div>
 </div>
-<script src="/js/joke.js"></script> 
+<script src="/js/add-joke.js"></script>
 {{!-- Missing link above --}}
