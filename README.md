@@ -37,7 +37,7 @@ THEN the elements of the webpage are responsive and in compliance with formattin
 
  *  [Installation](#installation)
  *  [Usage](#usage)
- *  [Screenshot](#screenshot)
+ *  [Assets](#Assets)
  *  [Testing](#testing)
 
 
@@ -59,11 +59,25 @@ The repository is available at:
 
 https://github.com/strait2thepoint/DadJokeAPI
 
-## Screenshot
 
-![The 'add joke' screen in a maximized Chrome window](./public/screencap_addjoke.png)
+## Assets:-
 
-![The 'view all jokes' screen in a maximized Chrome window](./public/screencap_alljokes.png)
+
+The following image demonstrates the website appearance:
+1. Front Start login webpage
+![Website](./assets/images/Front_login_page.png)
+
+2. Web page which allow Login and signup.
+![Website](./assets/images/login_signuppage.png)
+
+3. Webpage will allow to create new joke webpage.
+![Website](./assets/images/create_joke.png)
+
+4. Webpage will displayed all jokes.
+![Website](./assets/images/all_jokes.png)
+
+
+
 
 ## Testing
 
