@@ -1,8 +1,9 @@
 body {
   height: 100vh;
+  color: aliceblue;
 }
 
-main{
+main {
   height: 100%;
 }
 
@@ -146,23 +147,23 @@ btn-primary {
   color: #39c5ef;
 }
 
-.thewholeshebang{
-max-height: 70vh;
+.thewholeshebang {
+  max-height: 70vh;
 }
 
-.cssNJ{
-margin-top: 35vh;
-margin-bottom: 0;
-max-height: 100vh;
-margin-left: 33.5vw;
+.cssNJ {
+  margin-top: 35vh;
+  margin-bottom: 0;
+  max-height: 100vh;
+  margin-left: 33.5vw;
 }
 
-.newjokegroup{
-margin-left: 13.5vw;
-margin-right: 23vw;
+.newjokegroup {
+  margin-left: 13.5vw;
+  margin-right: 23vw;
 }
 
-.jokeButton:visited{
+.jokeButton:visited {
   text-decoration: none;
   color: #39c5ef;
   border-style: solid;
@@ -171,7 +172,7 @@ margin-right: 23vw;
   border-radius: 5px;
 }
 
-.jokeButton:active{
+.jokeButton:active {
   text-decoration: none;
   color: #39c5ef;
   border-style: solid;
@@ -180,7 +181,7 @@ margin-right: 23vw;
   border-radius: 5px;
 }
 
-.jokeButton:hover{
+.jokeButton:hover {
   color: #fd8cd7;
   text-decoration: none;
   border-style: solid;
@@ -188,7 +189,7 @@ margin-right: 23vw;
   border-radius: 5px;
 }
 
-.jokeButton{
+.jokeButton {
   text-decoration: none;
   color: #39c5ef;
   border-style: solid;

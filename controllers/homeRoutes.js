@@ -36,7 +36,7 @@ router.get('/jokes/:id', async (req, res) => {
     });
 
     const joke = jokeData.get({ plain: true });
-res.render('/joke', {
+    res.render('joke', {
       ...joke,
       logged_in: req.session.logged_in
     });
@@ -61,6 +61,52 @@ router.get('/allJokes', withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+// router.get('/jokes', (req, res) => {
+//   Joke.findAll({
+
+//     include: [{ model: Joke }],
+//     include: [
+//       {
+//         model: User,
+//         attributes: ['email'],
+//       },
+//     ],
+//   })
+//     .then(rawJokes => {
+//       const jokes = rawJokes.map((joke) => joke.get({ plain: true }))
+//       res.render('joke', {
+//         jokes,
+//         logged_in: req.session.logged_in
+//       });
+//     })
+//     .catch(err => {
+//       console.error(err);
+//       res.status(500).json({ error: 'Internal Server Error' });
+//     });
+// });
+
+router.get('/jokes', (req, res) => {
+  Joke.findAll({
+    include: [
+      {
+        model: User,
+        attributes: ['email'],
+      },
+    ],
+  })
+    .then(rawJokes => {
+      const jokes = rawJokes.map((joke) => joke.get({ plain: true }));
+      res.render('joke', {
+        jokes,
+        logged_in: req.session.logged_in
+      });
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
 });
 
 router.get('/login', (req, res) => {
