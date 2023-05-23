@@ -59,6 +59,10 @@ The repository is available at:
 
 https://github.com/strait2thepoint/DadJokeAPI
 
+The link to the project is deployed at:
+
+https://young-reef-43824.herokuapp.com/allJokes
+
 
 ## Assets:-
 
