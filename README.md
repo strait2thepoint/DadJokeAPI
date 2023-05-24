@@ -1,5 +1,5 @@
 # Groan Zone
-The Groan Zone is a website with a simple, blog-like layout. The content is intended to be all "dad jokes". The site is organized by posts, which can each be upvoted or downvoted by visitors.
+The Groan Zone is a website with a simple, blog-like layout. The content is intended to be all "dad jokes". The site is organized by jokes, which can each be upvoted or downvoted by visitors.
 
 <hr>
 
@@ -11,9 +11,13 @@ The Groan Zone is a website with a simple, blog-like layout. The content is inte
 <hr>
 
 # Description
-When visitors enter the Groan Zone, they are greeted with a splash page, that shows the top five "dad jokes" of the day. From there, they can navigate to the login page, or to a page that lists all jokes, in order of chronological creation.
 
-Visitors can register a user account, or login to a pre-existing account. Registered users can post a joke, which is then subject to upvoting and downvoting.
+1.   When visitors enter the Groan Zone, there is a login button that navigates to the login and signup pages for visitors. After login or signup, they are redirected to a page where they can create or add a new joke, allowing them to share their magical jokes.
+2.  On the leftmost top corner, there is a "Go to all jokes" button that directs visitors to a splash page or a page that lists all jokes. This page displays the top five "dad jokes" of the day, providing visitors with a humorous outlet and a source of stress relief.
+3.  Visitors have the option to register a user account or log in to their pre-existing account. Registered users can post jokes, which are then subject to upvoting and downvoting by other users.
+
+Motivation :- The motivation behind this platform is to provide users with a dedicated space to share jokes, allowing people to find humor and take a break from everyday stress.
+
 
 <hr>
 
